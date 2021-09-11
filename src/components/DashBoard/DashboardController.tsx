@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import moment from 'moment'
-import CallCenterLayout from './layout/CallCenterLayout'
+import DashboardLayout from './layout/DashboardLayout'
 import useAccounts from './hooks/useAccountStats'
 import useSessions from './hooks/useSessionStats'
 import useTransactions from './hooks/useTransactionStats'
@@ -36,7 +36,7 @@ const transactionChartData = {
  }
 
   return (
-    <CallCenterLayout
+    <DashboardLayout
       menuOptions={menuOptions}
       onFilterChange={onFilterChange}
       filter={filter}

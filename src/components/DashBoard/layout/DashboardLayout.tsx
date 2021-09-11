@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import { Typography } from "@material-ui/core";
-import useStyles from "./CallCenterLayout.styles";
+import useStyles from "./DashboardLayout.styles";
 import Chart from "../components/Chart/Chart";
 import ChartBar from "../components/ChartBar/ChartBar";
 import { ACCOUNT, SESSIONS, TRANSACTION } from "../constants";
@@ -18,7 +18,7 @@ interface Props {
   transactionData: any;
 }
 
-const CallCenterLayout: React.FC<Props> = ({
+const DashBoardLayout: React.FC<Props> = ({
   menuOptions,
   filter,
   onFilterChange,
@@ -52,7 +52,7 @@ const CallCenterLayout: React.FC<Props> = ({
                 </div>
                 <Grid container className={classes.chartContainer}>
                   <Chart
-                    chartLabel={"Accounts"}
+                    chartLabel={"Accounts: By Month"}
                     data={accountData.graphReadyAccounts}
                     pageTab={pageTab}
                     filter={filter}
@@ -77,13 +77,13 @@ const CallCenterLayout: React.FC<Props> = ({
                 </div>
                 <Grid container className={classes.chartContainer}>
                   <Chart
-                    chartLabel={"Transactions"}
+                    chartLabel={"Transactoins: By date"}
                     data={transactionData.graphReadyTransactionsbyDate}
                     pageTab={pageTab}
                     filter={filter}
                   />
                   <Chart
-                    chartLabel={"Transactions"}
+                    chartLabel={"Transactoins: By Branch"}
                     data={transactionData.graphReadyTransactionsbyBranch}
                     pageTab={pageTab}
                     filter={filter}
@@ -96,7 +96,7 @@ const CallCenterLayout: React.FC<Props> = ({
 
 
                 <Chart
-                  chartLabel={"Sessions"}
+                  chartLabel={"Sessions: By co-ordinates"}
                   data={sessionData.graphReadySessions}
                   pageTab={pageTab}
                   filter={filter}
@@ -110,4 +110,4 @@ const CallCenterLayout: React.FC<Props> = ({
   );
 };
 
-export default CallCenterLayout;
+export default DashBoardLayout;

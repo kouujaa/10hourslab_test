@@ -1,6 +1,6 @@
 import './App.css';
 import { ApolloProvider } from '@apollo/client'
-import CallCenterController from './components/CallCenter/CallCenterController';
+import CallCenterController from './components/DashBoard/DashboardController';
 import apolloClient from './apollo'
 
 function App() {

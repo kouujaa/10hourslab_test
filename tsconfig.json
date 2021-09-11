@@ -1,4 +1,8 @@
 {
+  "include": [
+    "src",
+    "decs.d.ts"
+  ],
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -6,21 +10,21 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": ".",
+    "noImplicitAny": false,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src"
-  ]
+    "jsx": "react-jsx",
+    "noFallthroughCasesInSwitch": true
+  }
 }

@@ -1,11 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { ApolloProvider } from '@apollo/client'
+import CallCenterController from './components/CallCenter/CallCenterController';
+import apolloClient from './apollo'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -18,7 +19,10 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */} 
+            {/* @ts-expect-error ts-migrate(2741) FIXME: Property 'setLink' is missing in type 'ApolloClien... Remove this comment to see the full error message */}
+      <ApolloProvider client={apolloClient}>
+      <CallCenterController /></ApolloProvider>
     </div>
   );
 }
